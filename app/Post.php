@@ -14,12 +14,12 @@ class Post extends Model
 
 
     public function next(){
-        return Post::where('id', '>', $this->id)->orderBy('created_at', 'ASC')->first();
+        return Post::where('id', '>', $this->id)->orderBy('id', 'ASC')->first();
     }
 
 
     public function prev(){
-        return Post::where('id', '<', $this->id)->orderBy('created_at', 'DESC')->first();
+        return Post::where('id', '<', $this->id)->orderBy('id', 'DESC')->first();
     }
 
 
